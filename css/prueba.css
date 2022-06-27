@@ -43,8 +43,7 @@
     opacity: 1; } }
 
 html {
-  height: 100%;
-  width: 100% !important; }
+  height: 100%; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -53,8 +52,7 @@ body {
   color: #333;
   display: flex;
   height: 100%;
-  flex-direction: column;
-  width: 100% !important; }
+  flex-direction: column; }
 
 .video {
   display: none; }
