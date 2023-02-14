@@ -31,7 +31,7 @@
                 <ul>
                     <li><a href="bio.html">Sobre Mi</a></li>
                     <li><a href="habilidades.html">Habilidades</a></li>
-                    <li><a href="exp.html">Experiencia</a></li>
+                    <li><a href="exp.html">Certificados</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
@@ -42,23 +42,23 @@
             <div class="text-center">
                 <h2 class="contactoTitulo">Contacto</h2>
             </div>
-            <div class="bloque blur-in">
+            <div class=" blur-in">
                 <h3 class="tit3">Ingresa tus datos para Contacto</h3>
                 <div class="containers">
-                    <form>
+
                         <div class="form-container2">
                             <label class="q">Nombre:</label>
-                            <input type="text" placeholder="Ingresar Nombre">
+                            <input type="text" placeholder="Ingresar Nombre" id="nombre">
                         
-                            <label class="q">Apellido:</label>
-                            <input type="text"placeholder="Ingresar Apellido">
+                            <label class="q">Asunto:</label>
+                            <input type="text"placeholder="Ingresar Apellido" id="asunto">
                         
                             <label class="q">Mensaje:</label>
-                            <textarea placeholder="Ingresar Mensaje"></textarea>
+                            <textarea placeholder="Ingresar Mensaje" id="contenido"></textarea>
                         
-                            <button type="button" class="btn btn-dark blur-in elboton">Enviar Datos</button>
+                            <button type="button" class="btn btn-dark blur-in elboton" onclick="enviar()">Enviar Datos</button>
                         </div>
-                    </form>
+
 
                 </div>
             </div>
@@ -69,10 +69,10 @@
             <p>
                 Diseñado por @francolelli
                 <ul class="footer_redes">
-                    <li class=""><a class="nav-link" href="#" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only"></span></a></li>
-                    <li class=""><a class="nav-link" href="#" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only"></span></a></li>
-                    <li class=""><a class="nav-link" href="#" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only"></span></a></li>
-                    <li class=""><a class="nav-link" href="#" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only"></span></a></li>
+                    <li class=""><a class="nav-link" href="https://www.linkedin.com/in/franco-lelli/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only"></span></a></li>
+                    <li class=""><a class="nav-link" href="https://github.com/FrancoLelli" title="GitHub"><i class="fab fa-github"></i><span class="menu-title sr-only"></span></a></li>
+                    <li class=""><a class="nav-link" href="https://twitter.com/FranLelli_" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only"></span></a></li>
+                    <li class=""><a class="nav-link" href="https://www.instagram.com/francolelli_/?hl=es-la" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only"></span></a></li>
                   </ul>
             </p>
         </div>
@@ -90,4 +90,17 @@
 </body>
 <!--Link Script-->
 <script src="./javascript/funcionBoton.js"></script>
+<script>
+    function enviar(){
+    nombre = document.getElementById('nombre').value
+    asunto = document.getElementById('asunto').value
+    mensaje = document.getElementById('contenido').value
+
+    if(nombre == "" || asunto == "" || mensaje == ""){
+        alert("COMPLETAR LOS CAMPOS PARA ENVIAR MAIL")
+    }else{
+        window.location.href = `mailto:francogastonlelli@gmail.com?subject=${asunto}&body=Me llamo ${nombre}. ${mensaje}`
+    }
+}
+</script>
 </html>
